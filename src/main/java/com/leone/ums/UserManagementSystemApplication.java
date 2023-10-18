@@ -14,7 +14,7 @@ import java.util.Objects;
 @SpringBootApplication
 public class UserManagementSystemApplication {
 
-/*
+
 	@Bean
 	public CommandLineRunner runScript(JdbcTemplate jdbcTemplate) {
 		return args -> {
@@ -22,7 +22,7 @@ public class UserManagementSystemApplication {
             ScriptUtils.executeSqlScript(Objects.requireNonNull(jdbcTemplate.getDataSource()).getConnection(), resource);
        };
 	}
-*/
+
 	public static void main(String[] args) {
 		SpringApplication.run(UserManagementSystemApplication.class, args);
 	}
