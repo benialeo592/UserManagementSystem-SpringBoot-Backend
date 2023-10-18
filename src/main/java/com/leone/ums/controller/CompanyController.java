@@ -27,5 +27,10 @@ public class CompanyController {
         return ResponseEntity.ok().body(this.companyService.getCompanyById(id));
     }
 
+    @PostMapping("/create")
+    public ResponseEntity<Company> create(@RequestBody Company company){
+        return ResponseEntity.ok().body(this.companyService.saveCompany(company));
+    }
+
 
 }

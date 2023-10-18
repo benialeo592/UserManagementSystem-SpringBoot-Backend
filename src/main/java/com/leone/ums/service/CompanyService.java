@@ -28,4 +28,7 @@ public class CompanyService {
         return foundCompany.get();
     }
 
+    public Company saveCompany(Company company){
+        return this.companyRepo.save(company);
+    }
 }
