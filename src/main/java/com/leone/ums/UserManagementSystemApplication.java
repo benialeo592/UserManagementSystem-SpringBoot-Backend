@@ -15,14 +15,6 @@ import java.util.Objects;
 public class UserManagementSystemApplication {
 
 
-	@Bean
-	public CommandLineRunner runScript(JdbcTemplate jdbcTemplate) {
-		return args -> {
-            Resource resource = new ClassPathResource("data.sql");
-            ScriptUtils.executeSqlScript(Objects.requireNonNull(jdbcTemplate.getDataSource()).getConnection(), resource);
-       };
-	}
-
 	public static void main(String[] args) {
 		SpringApplication.run(UserManagementSystemApplication.class, args);
 	}
